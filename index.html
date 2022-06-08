@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      body {
+        background-color: #eee;
+      }
       .box {
         border: 2px solid #444;
         width: 300px;
@@ -15,10 +18,33 @@
       }
       .all-wrapper {
         display: flex;
+        border: 3px dashed #222;
+        width: 980px;
+        margin: auto;
+      }
+      .heading {
+        color: rgb(30, 110, 110);
+        cursor: pointer;
+      }
+      .header {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 1rem auto;
+      }
+      .parag {
+        font-size: 25px;
+        font-weight: 400;
+        font-family: sans-serif;
+        color: rgb(107, 107, 222);
       }
     </style>
   </head>
   <body>
+    <div class="header">
+      <div class="parag">Users: 10</div>
+      <div class="parag">Posts: 10</div>
+      <div class="parag">Comments: 5</div>
+    </div>
     <div class="all-wrapper">
       <div id="wrapper"></div>
       <div class="posts"></div>

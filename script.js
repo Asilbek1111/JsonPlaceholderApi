@@ -19,7 +19,9 @@ function fetchData() {
       const htmlNames = data
         .map((user) => {
           return (
-            `<div data-id=${user.id} class = "box"><h3>Name: ${user.name}</h3>` +
+            `<div class="box"><h3 data-id=${user.id} class="heading">Name:${user.name}</h3>` +
+            `<p>Username: ${user.username}</p>` +
+            `<p>City: ${user.address.city}</p>` +
             `<p>Email: ${user.email}</p></div>`
           );
         })
@@ -38,7 +40,7 @@ function RenderHtml(posts) {
   const HtmlPosts = posts
     .map((user) => {
       return (
-        `<div data-id=${user.id} class = "box"><h3>Title: ${user.title}</h3>` +
+        `<div class = "box"><h3 data-id=${user.id} class="heading">Title: ${user.title}</h3>` +
         `<p>Body: ${user.body}</p></div>`
       );
     })
@@ -52,7 +54,7 @@ function RenderComments(comment) {
   const HtmlComments = comment
     .map((user) => {
       return (
-        `<div class = "box"><h3>Name: ${user.name}</h3>` +
+        `<div class ="box"><h3 class="heading">Name: ${user.name}</h3>` +
         `<p>Body: ${user.body}</p></div>`
       );
     })
